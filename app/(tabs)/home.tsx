@@ -60,13 +60,13 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.actionsContainer}>
-        <Link href="/map" asChild>
+        <Link href="../map" asChild>
           <TouchableOpacity style={styles.actionButton}>
             <Text style={styles.actionButtonText}>Find Centers</Text>
           </TouchableOpacity>
         </Link>
         
-        <Link href="/waste-recognition" asChild>
+        <Link href="./waste-recognition" asChild>
           <TouchableOpacity style={styles.actionButton}>
             <Text style={styles.actionButtonText}>Check Waste</Text>
           </TouchableOpacity>
@@ -75,7 +75,7 @@ export default function HomeScreen() {
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>My Rewards</Text>
-        <Link href="/rewards" asChild>
+        <Link href="../rewards" asChild>
           <TouchableOpacity>
             <Text style={styles.seeAll}>See All →</Text>
           </TouchableOpacity>

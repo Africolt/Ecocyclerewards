@@ -15,7 +15,7 @@ export default function WasteRecognitionScreen() {
           <Text style={styles.searchItemText}>plastic bottle</Text>
         </TouchableOpacity>
 
-        <Link href="/waste-recognition/categories" asChild>
+        <Link href="./waste-recognition/categories" asChild>
           <TouchableOpacity style={styles.browseButton}>
             <Text style={styles.browseButtonText}>Browse Categories</Text>
           </TouchableOpacity>

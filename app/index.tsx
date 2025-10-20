@@ -3,24 +3,23 @@ import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react
 
 export default function WelcomeScreen() {
   return (
-    <View style={styles.container}>{/* Background Image with fallback */}
-      <ImageBackground 
-        source={require('@/assets/images/welcome-bg.jpg')}
-        style={styles.background}
-        resizeMode="cover"
-      >
-        <View style={styles.overlay} />
+    <ImageBackground 
+      source={require('@/assets/images/welcome-bg.jpg')}
+      style={styles.background}
+      resizeMode="cover"
+    >
+      <View style={styles.overlay}>
         <View style={styles.container}>
           <View style={styles.content}>
-            {/* Add logo if you have one */}
-            {/* <Image source={require('@/assets/images/logos/ecocycle-logo.png')} style={styles.logo} /> */}
-            <><Text style={styles.logo}>EcoCycle Rewards</Text><Text style={styles.tagline}>Smart Recycling for Greener Murang&apos;a</Text><Text style={styles.subtitle}>
-                Join thousands of residents making Murang&apos;a County cleaner and greener!
-              </Text></>
+            <Text style={styles.logo}>EcoCycle Rewards</Text>
+            <Text style={styles.tagline}>Smart Recycling for Greener Murang&apos;a</Text>
+            <Text style={styles.subtitle}>
+              Join thousands of residents making Murang&apos;a County cleaner and greener!
+            </Text>
           </View>
           
           <View style={styles.buttonContainer}>
-            <Link href="/login" asChild>
+            <Link href="./login" asChild>
               <TouchableOpacity style={styles.primaryButton}>
                 <Text style={styles.primaryButtonText}>Get Started</Text>
               </TouchableOpacity>
@@ -31,8 +30,8 @@ export default function WelcomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
-      </ImageBackground>
-    </View>
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -41,16 +40,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   overlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(46, 139, 87, 0.7)',
-    zIndex: 1,
-  },
-  container: {
     flex: 1,
-    backgroundColor: 'rgba(46, 139, 87, 0.9)',
+    backgroundColor: 'rgba(46, 139, 87, 0.7)',
     justifyContent: 'space-between',
     paddingVertical: 60,
     paddingHorizontal: 20,
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
   },
   content: {
     alignItems: 'center',

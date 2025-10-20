@@ -5,10 +5,10 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 interface Category {
   id: number;
   name: string;
-  icon: string;
+  icon: string; // Using emoji for simplicity }
 }
 
-export default function ScanScreen() {
+export default function scan() {
   const categories: Category[] = [
     { id: 1, name: 'Plastic', icon: '♻️' },
     { id: 2, name: 'Paper', icon: '📄' },
@@ -31,7 +31,7 @@ export default function ScanScreen() {
           <Text style={styles.searchItemText}>plastic bottle</Text>
         </TouchableOpacity>
 
-        <Link href="/waste-recognition/categories" asChild>
+        <Link href="./waste-recognition/categories" asChild>
           <TouchableOpacity style={styles.browseButton}>
             <Text style={styles.browseButtonText}>Browse Categories</Text>
           </TouchableOpacity>
@@ -42,7 +42,7 @@ export default function ScanScreen() {
         {categories.map(category => (
           <Link 
             key={category.id} 
-            href="/waste-recognition/categories" 
+            href="./waste-recognition/categories" 
             asChild
           >
             <TouchableOpacity style={styles.categoryItem}>

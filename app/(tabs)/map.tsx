@@ -160,6 +160,9 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 2,
   },
+  centerInfo: {
+    marginBottom: 8,
+  },
   centerName: {
     fontSize: 16,
     fontWeight: 'bold',

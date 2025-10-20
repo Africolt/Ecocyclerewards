@@ -10,8 +10,23 @@ export default function LoginScreen() {
     location: 'Murang\'a Town, Kenya',
   });
 
-  const handleContinue = (): void => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleContinue = async (): Promise<void> => {
+    setIsLoading(true);
+    // Here you would typically handle form submission, e.g., send data to backend
+    // For this example, we'll just navigate to the home screen after a brief delay
+    // Simulate a network request
+    await new Promise(resolve => setTimeout(resolve, 1000));
     router.replace('/(tabs)/home');
+    setIsLoading(false);
+
+    // Simple validation
+    if (!formData.fullName.trim() || !formData.email.trim() || !formData.location.trim()) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    router.replace('./(tabs)/home');
   };
 
   const handleInputChange = (field: string, value: string): void => {
@@ -63,8 +78,13 @@ export default function LoginScreen() {
           placeholder="Enter your location"
         />
 
-        <TouchableOpacity style={styles.continueButton} onPress={handleContinue}>
-          <Text style={styles.continueButtonText}>Continue</Text>
+        <TouchableOpacity style={[styles.continueButton, isLoading && styles.disabledButton]}
+        onPress={handleContinue} 
+        disabled={isLoading}
+        >
+          <Text style={styles.continueButtonText}>
+            {isLoading ? 'Creating Account...' : 'Continue'}
+          </Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
@@ -116,5 +136,8 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  disabledButton: {
+    backgroundColor: '#A9A9A9',
   },
 });
