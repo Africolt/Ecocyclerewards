@@ -4,7 +4,7 @@
     "slug": "ecocycle-rewards",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/Ecocycle logo.jpeg",
+    "icon": "./assets/images/Ecocycle_logo.jpeg",
     "scheme": "ecocyclerewards",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -15,7 +15,7 @@
       "package": "com.ecocycle.rewards",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/Ecocycle logo.jpeg"
+        "foregroundImage": "./assets/images/Ecocycle_logo.jpeg"
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
@@ -29,7 +29,7 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/Ecocycle logo.jpeg"
+      "favicon": "./assets/images/Ecocycle_logo.jpeg"
     },
     "plugins": [
       "expo-router",
@@ -50,7 +50,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/Ecocycle logo.jpeg",
+          "image": "./assets/images/Ecocycle_logo.jpeg",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff",
